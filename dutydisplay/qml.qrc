@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>js/dateutil.js</file>
+        <file>images/customs-emblem.png</file>
+        <file>images/police-emblem.png</file>
+        <file>RollingMessage.qml</file>
+        <file>images/bg.bmp</file>
+        <file>js/ajax.js</file>
+        <file>js/weatherservice.js</file>
+        <file>duty.csv</file>
+    </qresource>
+</RCC>
