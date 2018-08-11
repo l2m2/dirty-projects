@@ -19,3 +19,9 @@ python3.6 manage.py createsuperuser
 # 密码为admin123456
 ```
 
+拷贝静态资源
+
+```bash
+python3.6 manage.py collectstatic
+```
+
