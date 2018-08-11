@@ -2,6 +2,7 @@ import werobot
 from werobot.config import Config
 
 config = Config(
+  SERVER='auto',
   HOST='0.0.0.0',
   PORT=80,
   TOKEN='dirty2018',
