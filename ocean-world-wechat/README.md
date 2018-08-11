@@ -3,6 +3,7 @@
 pip3.6 install --upgrade pip
 pip3.6 install werobot
 pip3.6 install django
+pip3.6 install whitenoise
 ```
 
 初始化数据库
