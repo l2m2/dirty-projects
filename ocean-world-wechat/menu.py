@@ -7,7 +7,7 @@ if __name__ == "__main__":
   client.create_menu({
       "button":[{
           "type": "click",
-          "name": "测试",
+          "name": "Test",
           "key": "music"
       }]
   })
