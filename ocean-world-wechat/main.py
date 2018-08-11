@@ -6,8 +6,8 @@ config = Config(
   HOST='0.0.0.0',
   PORT=80,
   TOKEN='dirty2018',
-  APP_ID='wx6aff19a293e7b2b0',
-  APP_SECRET='ccdb695e5539091c05690da508bf584e'
+  APP_ID='wx0328a45eebc76a6d',
+  APP_SECRET='168b9d0da865f46619713dd13ed6ab28'
 )
 
 robot = werobot.WeRoBot(config=config)
