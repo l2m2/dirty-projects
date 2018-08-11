@@ -9,9 +9,10 @@ if __name__ == "__main__":
             "name":
             "入园必看",
             "sub_button": [{
-                "type": "click",
+                "type": "view",
                 "name": "集团官网",
-                "key": "group-official-website"
+                "key": "group-official-website",
+                "url": "http://www.tianheplaza.com/"
             }, {
                 "type": "click",
                 "name": "景区介绍",
