@@ -20,8 +20,11 @@ from django.conf.urls import url
 from werobot.contrib.django import make_view
 from robot.robot import robot
 
+from Page.views import PageView
+
 urlpatterns = [
     url(r'^admin/$', admin.site.urls),
     url(r'^robot$', make_view(robot)),
-    url(r'page/', include('Page.urls')),
+    # url(r'page/', include('Page.urls')),
+    url(r'^page/', PageView.as_view())
 ]
