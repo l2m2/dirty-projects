@@ -21,7 +21,7 @@ from werobot.contrib.django import make_view
 from robot.robot import robot
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('robot', make_view(robot)),
+    url(r'^admin/$', admin.site.urls),
+    url(r'^robot$', make_view(robot)),
     url(r'page/', include('Page.urls')),
 ]
