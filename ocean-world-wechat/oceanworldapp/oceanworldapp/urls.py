@@ -26,4 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('robot', make_view(robot)),
     path('', include('Page.urls')),
+    path('layout', include('Page.urls')),
+    path('person', include('Page.urls')),
 ]
