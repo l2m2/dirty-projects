@@ -11,4 +11,24 @@ def introduction(message):
 def animal_science(message):
   return "相关内容正在更新中，敬请期待。"
 
+@robot.key_click("show-time")
+def show_time(message):
+  return "相关内容正在更新中，敬请期待。"
+
+@robot.key_click("tour-guide")
+def tour_guide(message):
+  return "相关内容正在更新中，敬请期待。"
+
+@robot.key_click("activity")
+def activity(message):
+  return "相关内容正在更新中，敬请期待。"
+
+@robot.key_click("job-offers")
+def job_offers(message):
+  return "相关内容正在更新中，敬请期待。"
+
+@robot.key_click("award-research")
+def award_research(message):
+  return "相关内容正在更新中，敬请期待。"
+
 robot.run()

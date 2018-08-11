@@ -11,7 +11,6 @@ if __name__ == "__main__":
             "sub_button": [{
                 "type": "view",
                 "name": "集团官网",
-                "key": "group-official-website",
                 "url": "http://www.tianheplaza.com/"
             }, {
                 "type": "click",
