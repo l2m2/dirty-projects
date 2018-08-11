@@ -2,11 +2,11 @@ from django.db import models
 
 # Create your models here.
 class UserInfo(models.Model):
-  wechatno = models.CharField(max_length=255)
-  fullname = models.CharField(max_length=255)
+  wechatno = models.CharField(max_length=255, unquire=True)
+  fullname = models.CharField(max_length=255, blank=True)
   cellphone = models.CharField(max_length=40)
-  sex = models.CharField(max_length=20)
-  email = models.CharField(max_length=40)
-  province = models.CharField(max_length=40)
-  address = models.CharField(max_length=1023)
-  id_card = models.CharField(max_length=20)
+  sex = models.CharField(max_length=20, blank=True)
+  email = models.CharField(max_length=40, blank=True)
+  province = models.CharField(max_length=40, blank=True)
+  address = models.CharField(max_length=1023, blank=True)
+  id_card = models.CharField(max_length=20, blank=True)
