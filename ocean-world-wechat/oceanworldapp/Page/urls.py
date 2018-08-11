@@ -1,6 +1,6 @@
-from django.conf.urls import url
+from django.urls import include, path
 from Page import views
 
 urlpatterns = [
-    url(r'^$', views.PageView.as_view()),
+    path('', views.PageView.as_view()),
 ]
