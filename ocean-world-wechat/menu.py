@@ -9,42 +9,42 @@ if __name__ == "__main__":
             "name":
             "入园必看",
             "sub_button": [{
-                "type": "view",
+                "type": "click",
                 "name": "集团官网"
             }, {
-                "type": "view",
+                "type": "click",
                 "name": "景区介绍"
             }, {
-                "type": "view",
+                "type": "click",
                 "name": "动物科普"
             }, {
-                "type": "view",
+                "type": "click",
                 "name": "表演时间"
             }, {
-                "type": "view",
+                "type": "click",
                 "name": "游览攻略"
             }]
         }, {
             "name":
             "最新信息",
             "sub_button": [{
-                "type": "view",
+                "type": "click",
                 "name": "主题活动"
             }, {
-                "type": "view",
+                "type": "click",
                 "name": "招聘信息"
             }, {
-                "type": "view",
+                "type": "click",
                 "name": "有奖调研"
             }]
         }, {
             "name":
             "购票服务",
             "sub_button": [{
-                "type": "view",
+                "type": "click",
                 "name": "个人中心"
             }, {
-                "type": "view",
+                "type": "click",
                 "name": "一键购票"
             }]
         }]
