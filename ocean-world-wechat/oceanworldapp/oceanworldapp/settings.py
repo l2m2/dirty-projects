@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'UserInfoModel',
     'OrderModel',
     'Page',
+    'api',
 ]
 
 MIDDLEWARE = [
