@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls import url
 
 from werobot.contrib.django import make_view
 from robot.robot import robot
@@ -22,5 +23,5 @@ from robot.robot import robot
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('robot', make_view(robot)),
-    path('page/', include('Page.urls')),
+    url(r'page/', include('Page.urls')),
 ]
