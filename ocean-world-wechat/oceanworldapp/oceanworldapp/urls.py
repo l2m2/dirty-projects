@@ -25,7 +25,7 @@ from Page.views import PageView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('robot', make_view(robot)),
-    path('api', include('api.urls')),
+    path('api/', include('api.urls')),
     path('', include('Page.urls')),
     path('layout', include('Page.urls')),
     path('person', include('Page.urls')),
