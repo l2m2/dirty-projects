@@ -9,7 +9,7 @@ config = Config(
   APP_SECRET='ccdb695e5539091c05690da508bf584e'
 )
 
-robot = werobot.WeRoBot(token='dirty2018')
+robot = werobot.WeRoBot(config=config)
 
 @robot.handler
 def hello(message):
