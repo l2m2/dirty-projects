@@ -14,12 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 
 from werobot.contrib.django import make_view
 from robot.robot import robot
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('robot', make_view(robot))
+    path('robot', make_view(robot)),
+    path('page/', include('Page.urls')),
 ]
