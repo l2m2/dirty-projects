@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class UserInfo(models.Model):
+  username = models.CharField(max_length=255)
   fullname = models.CharField(max_length=255)
   cellphone = models.CharField(max_length=40)
   sex = models.CharField(max_length=20)
