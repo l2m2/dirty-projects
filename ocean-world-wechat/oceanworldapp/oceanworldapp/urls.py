@@ -28,5 +28,4 @@ urlpatterns = [
     path('', include('Page.urls')),
     path('layout', include('Page.urls')),
     path('person', include('Page.urls')),
-    url(r'.*\.jpg', include('Page.urls')),
 ]
