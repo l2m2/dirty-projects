@@ -1,20 +1,14 @@
 import werobot
-from werobot.config import Config
+import config
 
-config = Config(
-  SERVER='auto',
-  HOST='0.0.0.0',
-  PORT=80,
-  SESSION_STORAGE=None,
-  TOKEN='dirty2018',
-  APP_ID='wx0328a45eebc76a6d',
-  APP_SECRET='168b9d0da865f46619713dd13ed6ab28'
-)
+robot = werobot.WeRoBot(config=config.cfg)
 
-robot = werobot.WeRoBot(config=config)
+@robot.key_click("introduction")
+def introduction(message):
+  return "相关内容正在更新中，敬请期待。"
 
-@robot.handler
-def hello(message):
-  return 'Hello World!'
+@robot.key_click("animal-science")
+def animal_science(message):
+  return "相关内容正在更新中，敬请期待。"
 
 robot.run()
