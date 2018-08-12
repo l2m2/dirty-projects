@@ -40,6 +40,7 @@ def show_time(message):
 @robot.key_click("tour-guide")
 def tour_guide(message):
     print(message)
+    print(message.source)
     return "相关内容正在更新中，敬请期待。"
 
 
