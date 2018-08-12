@@ -11,7 +11,7 @@ cfg = Config(
     APP_SECRET='dc9235aa8e7da02002221f1be221c7c6')
 
 robot = WeRoBot(config=cfg)
-
+oauth2_url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid={appid}&redirect_uri={redirect_uri}&response_type=code&scope={scope}&state={state}#wechat_redirect"
 
 @robot.subscribe
 def intro(message):

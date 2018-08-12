@@ -2,9 +2,6 @@ import werobot
 import config
 import sys
 
-reload(sys)
-sys.setdefaultencoding('utf8')
-
 if __name__ == "__main__":
     robot = werobot.WeRoBot(config=config.cfg)
     client = robot.client
@@ -53,8 +50,9 @@ if __name__ == "__main__":
             "name":
             "购票服务",
             "sub_button": [{
-                "type": "click",
+                "type": "view",
                 "name": "个人中心",
+                "url": "http://gp.tianheplaza.com/personalcenter",
                 "key": "personal-center"
             }, {
                 "type": "click",

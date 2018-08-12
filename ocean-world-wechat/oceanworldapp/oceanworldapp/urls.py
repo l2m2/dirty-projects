@@ -20,12 +20,13 @@ from django.conf.urls import url
 from werobot.contrib.django import make_view
 from robot.robot import robot
 
-from Page.views import PageView
+from personalcenter.views import PersonalCenterView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('robot', make_view(robot)),
     path('api/', include('api.urls')),
+    path('personalcenter', PersonalCenterView.as_view()),
     path('', include('Page.urls')),
     path('layout', include('Page.urls')),
     path('person', include('Page.urls')),

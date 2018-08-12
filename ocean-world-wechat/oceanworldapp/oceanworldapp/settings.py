@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'OrderModel',
     'Page',
     'api',
+    'personalcenter',
 ]
 
 MIDDLEWARE = [
