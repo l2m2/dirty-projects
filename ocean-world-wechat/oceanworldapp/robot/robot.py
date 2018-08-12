@@ -22,6 +22,7 @@ def intro(message):
 @robot.view
 def viewhander(message, session):
     openid = message.source
+    print(openid)
     if cache.get(openid) == None:
         userinfo = client.get_user_info(openid)
         cache.set(openid, userinfo, 600)
