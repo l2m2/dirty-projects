@@ -1,6 +1,6 @@
 from werobot import WeRoBot
 from werobot.config import Config
-
+from django.core.cache import cache
 import werobot
 
 cfg = Config(
@@ -22,19 +22,14 @@ def intro(message):
 @robot.view
 def viewhander(message, session):
     openid = message.source
-    if openid in session:
-        print("已经点过了")
-    else:
-        print("第一次点")
+    if cache.get(openid) == None:
         userinfo = client.get_user_info(openid)
-        print(userinfo)
-        session[openid] = True
+        cache.set(openid, userinfo, 600)
     return
 
 @robot.key_click("introduction")
 def introduction(message):
     return "相关内容正在更新中，敬请期待。"
-
 
 @robot.key_click("animal-science")
 def animal_science(message):

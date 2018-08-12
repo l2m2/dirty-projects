@@ -3,4 +3,5 @@ from api import views
 
 urlpatterns = [
     path('NoticeOrder', views.NoticeOrder),
+    
 ]
