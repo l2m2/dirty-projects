@@ -29,5 +29,5 @@ urlpatterns = [
     path('personalcenter', PersonalCenterView.as_view()),
     path('', include('Page.urls')),
     path('layout', include('Page.urls')),
-    re_path(r'^person/.*/$', include('Page.urls')),
+    re_path(r'^person/.*', include('Page.urls')),
 ]
