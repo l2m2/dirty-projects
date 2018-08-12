@@ -52,11 +52,13 @@ if __name__ == "__main__":
             "sub_button": [{
                 "type": "view",
                 "name": "个人中心",
-                "url": "http://gp.tianheplaza.com/personalcenter",
+                # "url": "http://gp.tianheplaza.com/personalcenter",
+                "url": "http://gp.tianheplaza.com/person",
                 "key": "personal-center"
             }, {
-                "type": "click",
+                "type": "view",
                 "name": "一键购票",
+                "url": "http://gp.tianheplaza.com/layout",
                 "key": "one-click-ticket-purchase"
             }]
         }]
