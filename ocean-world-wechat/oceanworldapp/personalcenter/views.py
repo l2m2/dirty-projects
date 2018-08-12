@@ -5,4 +5,5 @@ from robot.robot import cfg
 
 class PersonalCenterView(View):
     def get(self, request):
-        Client(config=cfg).grant_token()
+        ret = Client(config=cfg).grant_token()
+        print(ret)
