@@ -5,7 +5,7 @@ cfg = Config(
   HOST='0.0.0.0',
   PORT=80,
   SESSION_STORAGE=None,
-  TOKEN='dirty2018',
-  APP_ID='wx0328a45eebc76a6d',
-  APP_SECRET='168b9d0da865f46619713dd13ed6ab28'
+  TOKEN='pXCtMZZ66J',
+  APP_ID='wx8c53a82f87f6fe0d',
+  APP_SECRET='dc9235aa8e7da02002221f1be221c7c6'
 )
