@@ -15,18 +15,20 @@ cfg = Config(
 robot = WeRoBot(config=cfg)
 client = werobot.client.Client(config=cfg)
 
-web_get_code = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid={appid}&redirect_uri={redirect_uri}&response_type=code&state={state}&scope={scope}'
-web_get_code = web_get_code.format(appid=cfg['APP_ID'], redirect_uri='', state='', scope='snsapi_base')
-
 @robot.subscribe
 def intro(message):
     return "欢迎您关注南宁融晟极地海洋世界!"
 
 @robot.view
-def viewhander(message):
-    print(message.source)
-    userinfo = client.get_user_info(message.source)
-    print(userinfo)
+def viewhander(message, session):
+    openid = message.source
+    if openid in session:
+        print("已经点过了")
+    else:
+        print("第一次点")
+        userinfo = client.get_user_info(openid)
+        print("用户信息是："+userinfo)
+        session[openid] = True
     return
 
 @robot.key_click("introduction")
