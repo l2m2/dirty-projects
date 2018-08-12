@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.core.cache import cache
-from robot.robot import client
 
 def NoticeOrder(request):
   if request.method=="POST":
