@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.conf.urls import url
 
 from werobot.contrib.django import make_view
@@ -29,5 +29,5 @@ urlpatterns = [
     path('personalcenter', PersonalCenterView.as_view()),
     path('', include('Page.urls')),
     path('layout', include('Page.urls')),
-    path('person', include('Page.urls')),
+    re_path(r'^person/.*/$', include('Page.urls')),
 ]

@@ -1,9 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from django.views import View
-from werobot.client import Client
-from robot.robot import cfg 
+from robot.robot import client
 
 class PersonalCenterView(View):
     def get(self, request):
-        ret = Client(config=cfg).grant_token()
-        print(ret)
+        print("FUCK")
+        return HttpResponseRedirect("/person/14")
