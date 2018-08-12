@@ -30,4 +30,5 @@ urlpatterns = [
     path('', include('Page.urls')),
     path('layout', include('Page.urls')),
     re_path(r'^person/.*', include('Page.urls')),
+    re_path('service.asmx?op=GetProducts', 'http://otaapi.galasystec.net.cn/service.asmx?op=GetProducts'),
 ]
