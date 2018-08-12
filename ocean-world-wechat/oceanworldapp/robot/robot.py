@@ -27,7 +27,7 @@ def viewhander(message, session):
     else:
         print("第一次点")
         userinfo = client.get_user_info(openid)
-        print("用户信息是："+userinfo)
+        print(userinfo)
         session[openid] = True
     return
 
