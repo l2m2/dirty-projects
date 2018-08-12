@@ -1,6 +1,8 @@
 from werobot import WeRoBot
 from werobot.config import Config
 
+import werobot
+
 cfg = Config(
     SERVER='auto',
     HOST='0.0.0.0',
@@ -11,7 +13,9 @@ cfg = Config(
     APP_SECRET='dc9235aa8e7da02002221f1be221c7c6')
 
 robot = WeRoBot(config=cfg)
-oauth2_url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid={appid}&redirect_uri={redirect_uri}&response_type=code&scope={scope}&state={state}#wechat_redirect"
+
+web_get_code = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid={appid}&redirect_uri={redirect_uri}&response_type=code&state={state}&scope={scope}'
+web_get_code = web_get_code.format(appid=cfg['APP_ID'], redirect_uri='', state='', scope='snsapi_base')
 
 @robot.subscribe
 def intro(message):
@@ -35,6 +39,7 @@ def show_time(message):
 
 @robot.key_click("tour-guide")
 def tour_guide(message):
+    print(message)
     return "相关内容正在更新中，敬请期待。"
 
 
@@ -55,6 +60,7 @@ def award_research(message):
 
 @robot.key_click("personal-center")
 def personal_center(message):
+    print(message)
     return "相关内容正在更新中，敬请期待。"
 
 
