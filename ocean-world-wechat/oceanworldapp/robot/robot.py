@@ -21,6 +21,11 @@ web_get_code = web_get_code.format(appid=cfg['APP_ID'], redirect_uri='', state='
 def intro(message):
     return "欢迎您关注南宁融晟极地海洋世界!"
 
+@robot.view
+def viewhander(message):
+    print("viewhander")
+    print(message.source)
+    return
 
 @robot.key_click("introduction")
 def introduction(message):
