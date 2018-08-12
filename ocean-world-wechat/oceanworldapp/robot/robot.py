@@ -13,20 +13,20 @@ cfg = Config(
     APP_SECRET='dc9235aa8e7da02002221f1be221c7c6')
 
 robot = WeRoBot(config=cfg)
-client = werobot.client.Client(config=cfg)
+# client = werobot.client.Client(config=cfg)
 
 @robot.subscribe
 def intro(message):
     return "欢迎您关注南宁融晟极地海洋世界!"
 
-@robot.view
-def viewhander(message, session):
-    openid = message.source
-    print(openid)
-    if cache.get(openid) == None:
-        userinfo = client.get_user_info(openid)
-        cache.set(openid, userinfo, 600)
-    return
+# @robot.view
+# def viewhander(message, session):
+#     openid = message.source
+#     print(openid)
+#     if cache.get(openid) == None:
+#         userinfo = client.get_user_info(openid)
+#         cache.set(openid, userinfo, 600)
+#     return
 
 @robot.key_click("introduction")
 def introduction(message):
