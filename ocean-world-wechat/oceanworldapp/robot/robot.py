@@ -13,6 +13,7 @@ cfg = Config(
     APP_SECRET='dc9235aa8e7da02002221f1be221c7c6')
 
 robot = WeRoBot(config=cfg)
+client = werobot.client.Client(config=cfg)
 
 web_get_code = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid={appid}&redirect_uri={redirect_uri}&response_type=code&state={state}&scope={scope}'
 web_get_code = web_get_code.format(appid=cfg['APP_ID'], redirect_uri='', state='', scope='snsapi_base')
@@ -23,8 +24,9 @@ def intro(message):
 
 @robot.view
 def viewhander(message):
-    print("viewhander")
     print(message.source)
+    userinfo = client.get_user_info(message.source)
+    print(userinfo)
     return
 
 @robot.key_click("introduction")
