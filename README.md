@@ -8,3 +8,4 @@ small dirty projects.
 - call-private C++中调用虚私有函数的demo
 - call-private-slots Qt中调用私有槽函数的demo
 - call-private-normal C++中调用私有普通函数的demo
+- WinAppHelper 一个简单的win32程序外挂demo
