@@ -9,3 +9,4 @@ small dirty projects.
 - call-private-slots Qt中调用私有槽函数的demo
 - call-private-normal C++中调用私有普通函数的demo
 - win-app-helper 一个简单的win32程序外挂demo
+- source-tie 将源码目录下的所有源码文件打成一个文本文件，申请软件著作权时有用
