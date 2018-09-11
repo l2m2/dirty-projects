@@ -3,6 +3,6 @@
 
 用法:
 
-```bash
+```
 python3 tie.py -i source_dir1 source_dir2 -o output.txt
 ```
