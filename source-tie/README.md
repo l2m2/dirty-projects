@@ -3,6 +3,13 @@
 
 用法:
 
-```
+```bash
 python3 tie.py -i source_dir1 source_dir2 -o output.txt
+```
+
+另外提供了一个txt2docx的工具，用于将txt文件转成docx文档。
+用法：
+
+```bash
+python3 txt2docx.py 1.txt
 ```
