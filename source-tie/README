@@ -1,0 +1,8 @@
+此工具主要用来将固定目录下的源码打成一个文本文件。
+当申请软件著作权时有用。
+
+用法:
+
+```bash
+python3 tie.py -i source_dir1 source_dir2 -o output.txt
+```
