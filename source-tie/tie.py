@@ -26,14 +26,14 @@ def tie(src_dirs, dst_file):
   # transform glob patterns to regular expressions
   includes = r'|'.join([fnmatch.translate(x) for x in includes])
   excludes = r'|'.join([fnmatch.translate(x) for x in excludes]) or r'$.'
-  fd = open(output, 'w+', encoding='utf8')
+  fd = open(output, 'w+', encoding='utf-8')
   for d in dirs:
     for root, _, files in os.walk(d):
       files = [os.path.join(root, f) for f in files]
       files = [f for f in files if not re.match(excludes, f)]
       files = [f for f in files if re.match(includes, f)]
       for f in files:
-        with open(f, 'r', encoding='utf8', errors='ignore') as fd2:
+        with open(f, 'r', encoding='utf-8', errors='ignore') as fd2:
           print(f)
           fd.write('----{name}----'.format(name=ntpath.basename(f)))
           fd.write('\n')
