@@ -14,4 +14,4 @@ python3 tie.py -i source_dir1 source_dir2 -o output.txt
 ```bash
 python3 txt2docx.py 1.txt
 ```
-此工具依赖python-docx.
+此工具依赖[python-docx](https://github.com/python-openxml/python-docx).
