@@ -1,16 +1,14 @@
 var parseHocon = require('hocon-parser');
-var someHoconText = "a = 2 \
-                    a : 4 \
-                    b = [2, 3, 4] \
-                    b = [2, 5] \
-                    c { c1 : 5 } \
-                    d : Hello \
-                    e: \"Hello World\" \
-                    f: [ \
-                      \"F1\" \
-                      \"F2\" \
-                      \"F3\" \
-                      \"F4\" \
-                    ]";
-var obj = parseHocon(someHoconText);
-console.log(obj);
+var fs = require('fs');
+
+var content = fs.readFileSync('module.conf', 'utf8');
+var obj = parseHocon(content);
+console.log(JSON.stringify(obj));
+
+// merge
+console.log('\nmerge test\n');
+var dev = fs.readFileSync('conf_dev.conf', 'utf8');
+var proj = fs.readFileSync('conf_proj.conf', 'utf8');
+obj = parseHocon(dev + '\n' + proj);
+console.log(JSON.stringify(obj));
+
