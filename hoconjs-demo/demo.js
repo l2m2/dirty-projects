@@ -1,11 +1,15 @@
 var parseHocon = require('hocon-parser');
+
+var obj = parseHocon('"N.M":2');
+console.log(obj);
+
 var fs = require('fs');
 
-var content = fs.readFileSync('module.conf', 'utf8');
+var content = fs.readFileSync('lang.conf', 'utf8');
 var obj = parseHocon(content);
-console.log(JSON.stringify(obj));
+console.log(obj);
 
-// merge
+merge
 console.log('\nmerge test\n');
 var dev = fs.readFileSync('conf_dev.conf', 'utf8');
 var proj = fs.readFileSync('conf_proj.conf', 'utf8');
